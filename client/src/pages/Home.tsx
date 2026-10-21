@@ -1,19 +1,12 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, CalendarDays, Check, Clock3, Heart, Leaf, LoaderCircle, MapPin, Navigation } from "lucide-react";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
+import heroBotanical from "../assets/wedding-wreath.webp";
+import floralDivider from "../assets/wedding-floral-divider.webp";
 
 const WEDDING_DATE = new Date("2027-05-15T17:00:00-03:00").getTime();
 const MAP_QUERY = "Igreja Nossa Senhora da Assunção, Porteirinha, Minas Gerais, Brasil";
 const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(MAP_QUERY)}`;
-const HERO_BOTANICAL = "/manus-storage/async-images/5l212tXBLgxmvyh9TGnffC/image-1.webp";
-const FLORAL_DIVIDER = "/manus-storage/async-images/5l212tXBLgxmvyh9TGnffC/image-2.webp";
-import heroBotanical from "../assets/wedding-wreath.webp";
-
-
-const getAssetSource = (path: string) => import.meta.env.DEV
-  ? `https://leosir-pydwbysh.manus.space${path}`
-  : path;
-
 type Countdown = { days: number; hours: number; minutes: number; seconds: number };
 
 function getCountdown(): Countdown {
@@ -54,7 +47,7 @@ function FineRule({ heart = false }: { heart?: boolean }) {
 function DecorativeImage({ src, className, eager = false }: { src: string; className: string; eager?: boolean }) {
   return (
     <img
-      src={getAssetSource(src)}
+      src={src}
       className={className}
       alt=""
       aria-hidden="true"
@@ -105,20 +98,21 @@ export default function Home() {
       <div className="paper-grain" aria-hidden="true" />
       <header className="site-header">
         <a className="wordmark" href="#inicio" aria-label="Ana Clara e Lucas David — início">
-          <span className="wordmark">A<span>&</span>L</span>
+          <span className="wordmark-date">A<span>&</span>L</span>
           <span className="wordmark-date">15 <i>·</i> 05 <i>·</i> 2027</span>
         </a>
         <nav className="main-nav" aria-label="Navegação principal">
-          
-          <a className="nav-rsvp" href="#familia">Famílias<ArrowUpRight size={14} /></a>
+          <a className="nav-rsvp" href="#familia">familia<ArrowUpRight size={14} /></a>
 
-          <a className="nav-rsvp" href="#cerimonia">Cerimônia<ArrowUpRight size={14} /></a>
+          <a className="nav-rsvp" href="#cerimonia">cerimonia<ArrowUpRight size={14} /></a>
 
+         
         </nav>
       </header>
 
       <section className="hero">
-        <div className="hero-topline"><span className="topline-ornament">✦</span><span>Um dia para guardar para sempre</span><span className="topline-ornament">✦</span></div>
+        <div className="hero-topline"><span className="topline-ornament">✦</span>
+        <span>Um dia para guardar para sempre</span><span className="topline-ornament">✦</span></div>
         <motion.div
           className="hero-grid"
           initial={{ opacity: 0, y: 18 }}
@@ -134,9 +128,10 @@ export default function Home() {
                 <Leaf className="fallback-leaf fallback-leaf--three" />
                 <Leaf className="fallback-leaf fallback-leaf--four" />
               </div>
-              <DecorativeImage src={HERO_BOTANICAL} className="hero-botanical" eager />
+              <DecorativeImage src={heroBotanical} className="hero-botanical" eager />
               <div className="monogram">
-                <svg viewBox="0 0 180 180" aria-hidden="true">               
+                <svg viewBox="0 0 180 180" aria-hidden="true">
+          
                   <path d="M32 90h16M132 90h16M90 32v16M90 132v16" />
                 </svg>
                 <span>A<i>&</i>L</span>
@@ -145,7 +140,6 @@ export default function Home() {
               <div className="visual-seal"><span>15</span><i>mai</i><span>27</span></div>
             </div>
           </div>
-              <DecorativeImage src={heroBotanical} className="hero-botanical" eager />
 
           <div className="hero-copy">
             <span className="eyebrow"><i /> Com alegria, convidam você <i /></span>
@@ -188,7 +182,7 @@ export default function Home() {
         <Reveal className="invitation-copy" delay={0.12}>
           <span className="section-index">02 <i>—</i> A data</span>
           <p className="invitation-line">O começo de uma linda história</p>
-          <DecorativeImage src={FLORAL_DIVIDER} className="floral-divider" />
+          <DecorativeImage src={floralDivider} className="floral-divider" />
           <p className="script-date">15 de Maio de 2027</p>
           <p className="date-subline"><span /> Sábado <i>·</i> às 16h <span /></p>
         </Reveal>
@@ -227,7 +221,9 @@ export default function Home() {
         </div>
       </section>
 
-        <footer className="site-footer">
+      
+
+      <footer className="site-footer">
         <FineRule heart />
         <p className="footer-kicker">Com amor</p>
         <p className="footer-names">Ana Clara <i>e</i> Lucas David</p>
