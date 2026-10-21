@@ -102,9 +102,9 @@ export default function Home() {
           <span className="wordmark-date">15 <i>·</i> 05 <i>·</i> 2027</span>
         </a>
         <nav className="main-nav" aria-label="Navegação principal">
-          <a className="nav-rsvp" href="#familia">familia<ArrowUpRight size={14} /></a>
+          <a className="nav-rsvp" href="#familia">Nossa historia <ArrowUpRight size={14} /></a>
 
-          <a className="nav-rsvp" href="#cerimonia">cerimonia<ArrowUpRight size={14} /></a>
+          <a className="nav-rsvp" href="#cerimonia">Cerimônia<ArrowUpRight size={14} /></a>
 
          
         </nav>
