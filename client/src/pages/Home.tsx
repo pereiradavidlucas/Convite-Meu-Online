@@ -153,7 +153,7 @@ export default function Home() {
             <div className="hero-date-card">
               <div><CalendarDays size={16} /><span><b>15 de maio</b><small>2027</small></span></div>
               <span className="date-card-divider" />
-              <div><Clock3 size={16} /><span><b>Às 17h</b><small>sábado</small></span></div>
+              <div><Clock3 size={16} /><span><b>Às 16h</b><small>sábado</small></span></div>
             </div>
           </div>
         </motion.div>
