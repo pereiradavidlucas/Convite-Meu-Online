@@ -7,6 +7,8 @@ const MAP_QUERY = "Igreja Nossa Senhora da Assunção, Porteirinha, Minas Gerais
 const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(MAP_QUERY)}`;
 const HERO_BOTANICAL = "/manus-storage/async-images/5l212tXBLgxmvyh9TGnffC/image-1.webp";
 const FLORAL_DIVIDER = "/manus-storage/async-images/5l212tXBLgxmvyh9TGnffC/image-2.webp";
+import heroBotanical from "../assets/wedding-wreath.webp";
+
 
 const getAssetSource = (path: string) => import.meta.env.DEV
   ? `https://leosir-pydwbysh.manus.space${path}`
@@ -143,6 +145,7 @@ export default function Home() {
               <div className="visual-seal"><span>15</span><i>mai</i><span>27</span></div>
             </div>
           </div>
+              <DecorativeImage src={heroBotanical} className="hero-botanical" eager />
 
           <div className="hero-copy">
             <span className="eyebrow"><i /> Com alegria, convidam você <i /></span>
