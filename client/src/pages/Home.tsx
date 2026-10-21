@@ -128,7 +128,7 @@ export default function Home() {
                 <Leaf className="fallback-leaf fallback-leaf--three" />
                 <Leaf className="fallback-leaf fallback-leaf--four" />
               </div>
-              <DecorativeImage src={heroBotanical} className="hero-botanical" eager />
+             
               <div className="monogram">
                 <svg viewBox="0 0 180 180" aria-hidden="true">
           
