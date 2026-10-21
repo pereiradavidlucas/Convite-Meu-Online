@@ -141,7 +141,6 @@ export default function Home() {
                 <small>ANA CLARA <b>·</b> LUCAS DAVID</small>
               </div>
               <div className="visual-seal"><span>15</span><i>mai</i><span>27</span></div>
-              <span className="visual-caption">Com carinho, para sempre</span>
             </div>
           </div>
 
@@ -188,7 +187,7 @@ export default function Home() {
           <p className="invitation-line">O começo de uma linda história</p>
           <DecorativeImage src={FLORAL_DIVIDER} className="floral-divider" />
           <p className="script-date">15 de Maio de 2027</p>
-          <p className="date-subline"><span /> Sábado <i>·</i> às 17h <span /></p>
+          <p className="date-subline"><span /> Sábado <i>·</i> às 16h <span /></p>
         </Reveal>
 
         <Reveal className="ceremony-card" delay={0.16}>
@@ -197,7 +196,7 @@ export default function Home() {
             <span className="ceremony-icon"><MapPin size={18} strokeWidth={1.4} /></span>
             <h2>Igreja Nossa Senhora<br />da Assunção</h2>
             <p className="venue-location">Porteirinha <span>—</span> Minas Gerais</p>
-            <div className="ceremony-meta"><Clock3 size={14} /><span>15 de maio de 2027</span><i /> <span>17h</span></div>
+            <div className="ceremony-meta"><Clock3 size={14} /><span>15 de maio de 2027</span><i /> <span>16h</span></div>
             <a className="map-link" href={DIRECTIONS_URL} target="_blank" rel="noreferrer">
               <Navigation size={14} strokeWidth={1.5} /> Como chegar <ArrowUpRight size={13} />
             </a>
